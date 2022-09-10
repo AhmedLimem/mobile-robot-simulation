@@ -49,3 +49,22 @@ Save and close the file, then reload `.bashrc` to log back in:
 ```
 source ~/.bashrc
 ```
+
+## Simulating TurtleBot3 with RViz
+[RViz](http://wiki.ros.org/rviz) is a physics engine in which we will run our simulation.  
+The command `roslaunch` enables us to launch a program. ROS applications are organized in a system of __packages__, each with its own launch file. When we call `roslaunch`, we need to specify the desired package and launch file. We can build each ROS package alone. It is the smallest functional unit in the workspace. Note that we need to be inside a package for every ROS program we write.  
+
+The ROS package should at least contain these elements:
+  * src folder: Source code (C++, Python)
+  * CMakeLists.txt: __CMake__ rules for compilation
+  * package.xml: Package information and dependencies
+
+We launch the simulation using the following command:
+```
+roslaunch turtlebot3_fake turtlebot3_fake.launch
+```
+If we want to move the robot around his environment, we need another launch file. We type this command in a new terminal:
+```
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+```
+In this terminal we click on the mentioned keys to control the movement of TurtleBot3:
