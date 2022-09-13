@@ -7,10 +7,10 @@ We will test the following examples:
   * Creating a Map // World
 
 ## Getting Started
-We will run the Rviz simulator of virtual robot urtlebot3 in version of [ROS Noetic Ninjemys](http://wiki.ros.org/noetic "ROS Noetic Ninjemys").  
+We will run the Rviz simulator of virtual robot Turtlebot3 in version of [ROS Noetic Ninjemys](http://wiki.ros.org/noetic "ROS Noetic Ninjemys").  
 We will test __SLAM (Simultaneous localization and mapping) and autonomous navigation__.
 ### Prerequisites
-We assume you have ROS Noetic installed using Ububtu 20.04. Check which version of ROS you have by running the command:  
+We assume you have ROS Noetic installed using Ubuntu 20.04. Check which version of ROS you have by running the command:  
 ```
 $ ls /opt/ros
 ```
@@ -22,7 +22,7 @@ In a new terminal, enter the following commands (one right after the other):
 ```
 $ mkdir -p ~/catkin_ws/src
 ```
-Clone the source code (You need to have git installed):
+Clone the source code (You need to have __git__ installed):
 ```
 $ cd ~/catkin_ws/src/
 $ git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
@@ -76,7 +76,7 @@ The Rviz simulator should open with the following screen:
 ![image](https://user-images.githubusercontent.com/51058382/189885817-942df8b6-5639-466e-b767-f5cb8337cd01.png "Rviz simulator")  
 
 ## SLAM and Autonomous Navigation with TurtleBot3
-[SLAM](https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping) concerns the problem of a robot building or updating a map of an unknown environment while simultaneously keeping track its location in that environment.  
+[SLAM](https://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping) concerns the problem of a robot building or updating a map of an unknown environment while simultaneously keeping track of its location in that environment.  
 
 We choose an environment with obstacle avoidance for testing SLAM and navigation algorithms. The goal is to make TurtleBot3 autonomously navigate around a room and avoid colliding into objects.  
 As a first step, we can access and inspect the sensor data. We can inspect the scan data from `rostopic` using a new terminal:
